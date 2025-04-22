@@ -1,83 +1,3 @@
-// import 'package:flutter/material.dart';
-// import 'package:http/http.dart' as http;
-// import 'dart:convert';
-// // {
-// //   "email": "eve.holt@reqres.in",
-// //   "password": "cityslicka"
-// // }
-
-// class LoginApi extends StatefulWidget {
-//   @override
-//   _LoginApiState createState() => _LoginApiState();
-// }
-
-// class _LoginApiState extends State<LoginApi> {
-//   final apiUrl = Uri.parse("https://reqres.in/api/login");
-//   TextEditingController emailController = TextEditingController();
-//   TextEditingController passwordController = TextEditingController();
-
-//   Future<void> sendLoginRequest() async {
-//     var response = await http.post(
-//       apiUrl,
-//       headers: {"Content-Type": "application/json"},
-//       body: jsonEncode({
-//         "email": emailController.text,
-//         "password": passwordController.text,
-//       }),
-//     );
-
-//     if (response.statusCode == 200) {
-//       print('Login successful!');
-//       Navigator.push(
-//         context,
-//         MaterialPageRoute(builder: (context) => SecondPage()),
-//       );
-//     } else {
-//       print('Login failed!');
-//       ScaffoldMessenger.of(context).showSnackBar(
-//         SnackBar(content: Text("Login Failed!")),
-//       );
-//     }
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(title: Text('Login')),
-//       body: Padding(
-//         padding: EdgeInsets.all(16.0),
-//         child: Column(
-//           children: <Widget>[
-//             TextField(
-//               controller: emailController,
-//               decoration: InputDecoration(hintText: "Email"),
-//             ),
-//             TextField(
-//               controller: passwordController,
-//               obscureText: true,
-//               decoration: InputDecoration(hintText: "Password"),
-//             ),
-//             SizedBox(height: 20),
-//             ElevatedButton(
-//               onPressed: sendLoginRequest,
-//               child: Text("Login"),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-// class SecondPage extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(title: Text('Second Page')),
-//       body: Center(child: Text("Welcome to the second page!")),
-//     );
-//   }
-// }
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -133,17 +53,6 @@ class _LoginApiState extends State<LoginApi> {
                 controller: emailController,
                 decoration: InputDecoration(hintText: "Email"),
                 validator: (value) {
-                  //   if (value == null || value.isEmpty) {
-                  //     return 'Please enter your email';
-                  //   } else if (
-                  //       // !RegExp(
-                  //       // r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\$'
-                  //           // )
-                  //           .hasMatch(value)) {
-                  //     return 'Enter a valid email';
-                  //   }
-                  //   return null;
-                  // },
                   if (value == null || value.isEmpty) {
                     return 'Please enter your email';
                   } else if (!RegExp(
@@ -166,17 +75,6 @@ class _LoginApiState extends State<LoginApi> {
                   }
                   return null;
                 },
-                // validator: (value) {
-                //   if (value == null || value.isEmpty) {
-                //     return 'Please enter your password';
-                //   } else if (value.length < 6) {
-                //     return 'Password must be at least 6 characters';
-                //   } else if (!RegExp(r'^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]+$')
-                //       .hasMatch(value)) {
-                //     return 'Password must contain both letters and numbers';
-                //   }
-                //   return null;
-                // },
               ),
               SizedBox(height: 20),
               ElevatedButton(
