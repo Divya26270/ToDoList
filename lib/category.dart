@@ -57,8 +57,7 @@ class _CategoryState extends State<CategoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Expanded(
-            child: Column(children: [
+        body: Column(children: [
       // Search bar
       Padding(
         padding: const EdgeInsets.all(8.0),
@@ -91,7 +90,7 @@ class _CategoryState extends State<CategoryPage> {
             : GridView.builder(
                 padding: const EdgeInsets.all(8.0),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
+                  crossAxisCount: kIsWeb ? 2 : 1,
                   mainAxisSpacing: 8,
                   crossAxisSpacing: 8,
                   childAspectRatio: 1,
@@ -135,6 +134,6 @@ class _CategoryState extends State<CategoryPage> {
                 },
               ),
       ),
-    ])));
+    ]));
   }
 }
