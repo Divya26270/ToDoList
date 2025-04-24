@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login_api/loginapi.dart';
+import 'package:login_api/dashboard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,10 +10,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: LoginApi(),
+      home: Dashboard(),
     );
   }
 }
