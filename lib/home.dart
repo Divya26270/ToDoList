@@ -1,4 +1,3 @@
-// import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,14 +17,6 @@ class _HomePageState extends State<HomePage> {
           children: [
             Expanded(
               child: LayoutBuilder(builder: (context, constraints) {
-                // if (kIsWeb) {
-                //   return Image.network(
-                //     'assets/jewel2.png',
-                //     fit: BoxFit.contain,
-                //     width: constraints.maxWidth,
-                //     height: constraints.maxHeight,
-                //   );
-                // } else {
                 return Image.asset(
                   'assets/jewel2.png',
                   fit: BoxFit.contain,

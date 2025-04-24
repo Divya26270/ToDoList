@@ -109,17 +109,11 @@ class _CategoryState extends State<CategoryPage> {
                           child: ClipRRect(
                               borderRadius: const BorderRadius.vertical(
                                   top: Radius.circular(10)),
-                              child: kIsWeb
-                                  ? Image.network(
-                                      item['image']!,
-                                      fit: BoxFit.cover,
-                                      width: double.infinity,
-                                    )
-                                  : Image.asset(
-                                      item['image']!,
-                                      fit: BoxFit.cover,
-                                      width: double.infinity,
-                                    )),
+                              child: Image.asset(
+                                item['image']!,
+                                fit: BoxFit.cover,
+                                width: double.infinity,
+                              )),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
