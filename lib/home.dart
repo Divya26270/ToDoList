@@ -17,24 +17,25 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Expanded(
-              child: LayoutBuilder(builder: (context, constraints) {
-                // if (kIsWeb) {
-                //   return Image.network(
-                //     'assets/jewel2.png',
-                //     fit: BoxFit.contain,
-                //     width: constraints.maxWidth,
-                //     height: constraints.maxHeight,
-                //   );
-                // } else {
-                return Image.asset(
-                  'assets/jewel2.png',
-                  fit: BoxFit.contain,
-                  width: constraints.maxWidth,
-                  height: constraints.maxHeight,
-                );
-              }
-                  // },
-                  ),
+              child: LayoutBuilder(
+                builder: (context, constraints) {
+                  if (kIsWeb) {
+                    return Image.network(
+                      'assets/jewel2.png',
+                      fit: BoxFit.contain,
+                      width: constraints.maxWidth,
+                      height: constraints.maxHeight,
+                    );
+                  } else {
+                    return Image.asset(
+                      'assets/jewel2.png',
+                      fit: BoxFit.contain,
+                      width: constraints.maxWidth,
+                      height: constraints.maxHeight,
+                    );
+                  }
+                },
+              ),
             ),
           ],
         ),
