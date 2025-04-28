@@ -35,7 +35,7 @@ class _DashboardState extends State<Dashboard> {
       appBar: AppBar(
         title: const Center(
           child: Text(
-            'Online Jewellery Shopping',
+            'Sparkle Cart',
             style: TextStyle(
               color: Colors.green,
               fontWeight: FontWeight.bold,
